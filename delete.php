@@ -12,13 +12,12 @@
     if($countDelRows > 0){
       $arrResult["status"] = true;
      } else {
-      $arrResult["error"] = "something went wrong";
+      $arrResult["error"]  = ["code"=> "404", "massage"=> "User not found"];
      }
       $arrResult["id"] = $id;
-      header("content-type: application/json");
       echo json_encode($arrResult);
  }else {
-      header("content-type: application/json");
+
       echo json_encode($arrResult);
  }
  $dhb = null;
