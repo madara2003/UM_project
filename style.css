@@ -5,6 +5,7 @@ basic styling
     box-sizing: border-box;
 }
 body {
+    background-color: #E1D9D1;
     font-size: 10px;
 }
 
@@ -16,6 +17,9 @@ img {
     height: 100%;
 }
 
+.center_text {
+  text-align: center;
+}
 /* Header */
 .header {
     display: flex;
@@ -82,10 +86,32 @@ img {
     width: 100px;
     height: 50px;
   }
+
+  .role_container {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+  }
+  .select_container {
+    width: 150px;
+  }
   .status {
     width: 13px;
     height: 13px;
     border-radius: 50%;
+    background-color: gray;
+  }
+  .group_container {
+    display:flex;
+    gap: 5px;
+  }
+
+  .table_conntainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center
   }
   
   /* Hide default HTML checkbox */
@@ -183,11 +209,23 @@ input[type="text"] {
     width: 400px;
     height: 48px;
   }
-  
-/* table styling */
 
+.status_container {
+  display: flex;
+  gap: 4px;
+  padding-top: 18px;
+}
+/* table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+  background: #ddd;
+  table-layout: fixed;
+}
 
 .content_table {
+   table-layout: fixed;
     border-collapse: collapse;
     font-size: 2rem;
     margin:  0px  ;
@@ -213,3 +251,43 @@ input[type="text"] {
 }
 
 
+.table_conn {
+  width: 1300px;
+}
+@media (max-width: 1200px) {
+.table_conn {
+  width: 1024px;
+}
+}
+@media (max-width: 1024px) {
+.table_conn {
+  width: 900px;
+}
+}
+@media (max-width: 769px) {
+.table_conn {
+  width: 600px;
+ }
+} 
+@media (max-width: 600px) {
+.table_conn {
+  width: 500px;
+ }
+ .status_container {
+  width: 30px;
+  height: 50px;
+ }
+
+ td {
+  font-size: 8px;
+ }
+} 
+@media (max-width: 500px) {
+.table_conn {
+  width: 400px;
+ }
+ .status_container {
+  width: 13px;
+  height: 13px;
+ }
+} 
